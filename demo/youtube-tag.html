@@ -1,0 +1,30 @@
+<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../../iron-icons/iron-icons.html">
+<dom-module id="youtube-tag">
+  <template>
+    <style>
+      :host {
+        font-family: sans-serif;
+      };
+    </style>
+<iframe width="{{width}}" height="{{height}}" theme="{{theme}}" start={{start}} autoplay="{{autoplay}}" src="https://www.youtube.com/embed/{{id}}" frameborder="0" allowfullscreen={{fullscreen}}></iframe>
+  </template>
+
+  <script>
+    Polymer({
+      is: "youtube-tag",
+      properties: {
+            id: String,
+            fullscreen: { type: String, value: "fullscreen" },
+            width:{type: String, value: "560"},
+            height:{type: String, value: "315"},
+            autoplay:{type: String, value: 'false'},
+            cc_load_policy:{type: String, value: 'true'},
+            controls:{type: String, value: '1'},
+            start:{type: String,value:'0'},
+            theme:{type:String,value:'light'},
+          },
+
+    });
+  </script>
+</dom-module>
